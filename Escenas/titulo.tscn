@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://fropchvv7htx"]
+[gd_scene load_steps=6 format=3 uid="uid://fropchvv7htx"]
 
 [ext_resource type="Texture2D" uid="uid://c024cmdervbnx" path="res://Images/White.png" id="1_xx7vy"]
 [ext_resource type="Texture2D" uid="uid://bv4ql1mmnin4o" path="res://Images/logo.png" id="2_60u3u"]
 [ext_resource type="Script" path="res://Scrips/Boton.gd" id="3_lb237"]
 [ext_resource type="Script" path="res://Scrips/BotonExit.gd" id="4_d20fm"]
+[ext_resource type="Texture2D" uid="uid://1tyh3h5upkrm" path="res://Images/UNI.png" id="5_pled6"]
 
 [node name="Titulo" type="Control"]
 layout_mode = 3
@@ -41,6 +42,11 @@ offset_bottom = 528.0
 text = "Salir
 "
 script = ExtResource("4_d20fm")
+
+[node name="Uni" type="Sprite2D" parent="."]
+position = Vector2(60, 49)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_pled6")
 
 [connection signal="pressed" from="Boton" to="Boton" method="_on_pressed"]
 [connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_pressed"]
