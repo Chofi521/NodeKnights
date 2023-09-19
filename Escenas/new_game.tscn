@@ -1,0 +1,131 @@
+[gd_scene load_steps=9 format=3 uid="uid://u5ekf58wjjhf"]
+
+[ext_resource type="Texture2D" uid="uid://q7argvgq4nvq" path="res://Images/character background.jpg" id="1_4als0"]
+[ext_resource type="Script" path="res://Scrips/new_game.gd" id="1_e6n47"]
+[ext_resource type="Texture2D" uid="uid://de6pidl4fwxsv" path="res://Sprites/d43ed8107f1ba7a.png.png" id="2_gr1gv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbe8y"]
+atlas = ExtResource("2_gr1gv")
+region = Rect2(466, 0, 233, 283)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qr1vh"]
+atlas = ExtResource("2_gr1gv")
+region = Rect2(466, 849, 233, 283)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0kgt2"]
+atlas = ExtResource("2_gr1gv")
+region = Rect2(466, 283, 233, 283)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w83f8"]
+atlas = ExtResource("2_gr1gv")
+region = Rect2(466, 566, 233, 283)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qkdd1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbe8y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qr1vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0kgt2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w83f8")
+}],
+"loop": true,
+"name": &"Spin",
+"speed": 1.0
+}]
+
+[node name="NewGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e6n47")
+
+[node name="CharacterBackground" type="Sprite2D" parent="."]
+position = Vector2(575.5, 324.5)
+scale = Vector2(0.600521, 0.540833)
+texture = ExtResource("1_4als0")
+
+[node name="ObjetoAlmacenador2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Lname" type="Label" parent="ObjetoAlmacenador2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.102
+offset_left = 429.0
+offset_top = 107.0
+offset_right = 556.92
+offset_bottom = 151.92
+theme_override_font_sizes/font_size = 33
+text = "Nombre"
+
+[node name="TxtName" type="TextEdit" parent="ObjetoAlmacenador2"]
+layout_mode = 0
+offset_left = 585.0
+offset_top = 111.0
+offset_right = 969.0
+offset_bottom = 146.0
+theme_override_font_sizes/font_size = 22
+
+[node name="TxtFavThing" type="TextEdit" parent="ObjetoAlmacenador2"]
+layout_mode = 0
+offset_left = 657.0
+offset_top = 190.0
+offset_right = 1041.0
+offset_bottom = 225.0
+theme_override_font_sizes/font_size = 22
+
+[node name="LFavThing" type="Label" parent="ObjetoAlmacenador2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.102
+anchor_bottom = 0.102
+offset_left = 429.0
+offset_top = 183.0
+offset_right = 639.92
+offset_bottom = 227.92
+theme_override_font_sizes/font_size = 33
+text = "Cosa Favorita"
+
+[node name="Iniciar" type="Button" parent="ObjetoAlmacenador2"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 547.0
+offset_right = 705.0
+offset_bottom = 601.0
+theme_override_font_sizes/font_size = 33
+text = "Iniciar la Aventura"
+
+[node name="Regresar" type="Button" parent="ObjetoAlmacenador2"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 34.0
+offset_right = 334.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 33
+text = "Regresar
+"
+
+[node name="ObjetoAlmacenador" type="Node2D" parent="."]
+
+[node name="Protagonist" type="AnimatedSprite2D" parent="ObjetoAlmacenador"]
+position = Vector2(153, 303)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_qkdd1")
+animation = &"Spin"
+frame_progress = 0.660556
+
+[connection signal="pressed" from="ObjetoAlmacenador2/Iniciar" to="." method="_on_iniciar_pressed"]
+[connection signal="pressed" from="ObjetoAlmacenador2/Regresar" to="." method="_on_regresar_pressed"]

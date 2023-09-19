@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://fropchvv7htx"]
+
+[ext_resource type="Texture2D" uid="uid://c024cmdervbnx" path="res://Images/White.png" id="1_xx7vy"]
+[ext_resource type="Texture2D" uid="uid://bv4ql1mmnin4o" path="res://Images/logo.png" id="2_60u3u"]
+[ext_resource type="Script" path="res://Scrips/Boton.gd" id="3_lb237"]
+[ext_resource type="Script" path="res://Scrips/BotonExit.gd" id="4_d20fm"]
+
+[node name="Titulo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="White" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324)
+scale = Vector2(0.900781, 0.905556)
+texture = ExtResource("1_xx7vy")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(564, 131)
+texture = ExtResource("2_60u3u")
+
+[node name="Boton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 255.0
+offset_right = 698.0
+offset_bottom = 363.0
+text = "Jugar
+"
+script = ExtResource("3_lb237")
+
+[node name="ButtonExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 421.0
+offset_top = 420.0
+offset_right = 698.0
+offset_bottom = 528.0
+text = "Salir
+"
+script = ExtResource("4_d20fm")
+
+[connection signal="pressed" from="Boton" to="Boton" method="_on_pressed"]
+[connection signal="pressed" from="ButtonExit" to="ButtonExit" method="_on_pressed"]
