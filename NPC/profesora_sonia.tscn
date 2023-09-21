@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://btr6hvaln1me0"]
+
+[ext_resource type="Texture2D" uid="uid://ds71k35t06x57" path="res://Sprites/mujer-sheet.png" id="1_qnuqm"]
+[ext_resource type="Script" path="res://Scrips_NPC/profesora_sonia.gd" id="1_yu5j0"]
+[ext_resource type="PackedScene" uid="uid://cfgvxn3txuega" path="res://Interaction/interaction_area.tscn" id="2_fa2nj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1br2w"]
+atlas = ExtResource("1_qnuqm")
+region = Rect2(0, 0, 748, 1133)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1h2vi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1br2w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s8lf3"]
+radius = 526.421
+
+[node name="ProfesoraSonia" type="Node2D"]
+position = Vector2(328, 249)
+scale = Vector2(0.19, 0.19)
+script = ExtResource("1_yu5j0")
+
+[node name="SoniaAnimation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1h2vi")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_fa2nj")]
+position = Vector2(368.421, -363.158)
+action_name = "Coger"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(-252.632, 315.789)
+shape = SubResource("CircleShape2D_s8lf3")

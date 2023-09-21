@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtecy5ngxvq5g"]
+
+[ext_resource type="Texture2D" uid="uid://c4vftfolv0hpf" path="res://Images/salon-sheet.png" id="1_8wxlf"]
+[ext_resource type="Script" path="res://Scrips/Salon.gd" id="2_a7dym"]
+[ext_resource type="PackedScene" uid="uid://b2saht6u013ar" path="res://Player/player.tscn" id="3_sutx5"]
+[ext_resource type="PackedScene" uid="uid://btr6hvaln1me0" path="res://NPC/profesora_sonia.tscn" id="4_p6fiu"]
+
+[node name="Salon" type="Sprite2D"]
+position = Vector2(574, 326)
+scale = Vector2(2.1, 1.28)
+texture = ExtResource("1_8wxlf")
+script = ExtResource("2_a7dym")
+
+[node name="Player" parent="." instance=ExtResource("3_sutx5")]
+
+[node name="ProfesoraSonia" parent="." instance=ExtResource("4_p6fiu")]
+position = Vector2(656, 425)
+scale = Vector2(0.09, 0.09)

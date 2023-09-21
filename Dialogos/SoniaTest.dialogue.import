@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://8ukhxexe2jag"
+path="res://.godot/imported/SoniaTest.dialogue-eef510552a9cbfd48b28846520516e15.tres"
+
+[deps]
+
+source_file="res://Dialogos/SoniaTest.dialogue"
+dest_files=["res://.godot/imported/SoniaTest.dialogue-eef510552a9cbfd48b28846520516e15.tres"]
+
+[params]
+
+defaults=true

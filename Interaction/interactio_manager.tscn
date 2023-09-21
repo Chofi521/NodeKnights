@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1p2bwn7jwfsr"]
+
+[ext_resource type="Script" path="res://Interaction/InteractioManager.gd" id="1_jg7us"]
+[ext_resource type="FontFile" uid="uid://cbxjo83yrfhde" path="res://Fonts/MinecraftRegular-Bmg3.otf" id="1_wykpc"]
+
+[node name="InteractioManager" type="Node2D"]
+z_index = 1
+script = ExtResource("1_jg7us")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_wykpc")
+theme_override_font_sizes/font_size = 28
+text = "[E] para interactuar"
+vertical_alignment = 1
