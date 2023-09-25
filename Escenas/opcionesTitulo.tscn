@@ -29,7 +29,10 @@ text = "Nuevo Juego
 script = ExtResource("2_gwakl")
 
 [node name="Button2" type="Button" parent="."]
+<<<<<<< HEAD
 layout_mode = 0
+=======
+>>>>>>> 2cee3a5ed9694de875b4941f3c4970ddb79cd952
 offset_left = 426.0
 offset_top = 354.0
 offset_right = 703.0
@@ -39,7 +42,10 @@ text = "Continuar
 "
 
 [node name="Button3" type="Button" parent="."]
+<<<<<<< HEAD
 layout_mode = 0
+=======
+>>>>>>> 2cee3a5ed9694de875b4941f3c4970ddb79cd952
 offset_left = 426.0
 offset_top = 485.0
 offset_right = 703.0
