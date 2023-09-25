@@ -10,6 +10,7 @@ script = ExtResource("1_jg7us")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_wykpc")
 theme_override_font_sizes/font_size = 28
 text = "[E] para interactuar"

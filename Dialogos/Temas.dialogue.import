@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_8"
+type="Resource"
+uid="uid://dkce17hbu4drd"
+path="res://.godot/imported/Temas.dialogue-ecedfec3d5b0a3e654a01d5b03fcb566.tres"
+
+[deps]
+
+source_file="res://Dialogos/Temas.dialogue"
+dest_files=["res://.godot/imported/Temas.dialogue-ecedfec3d5b0a3e654a01d5b03fcb566.tres"]
+
+[params]
+
+defaults=true

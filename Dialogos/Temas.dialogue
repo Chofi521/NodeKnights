@@ -1,0 +1,9 @@
+~ Start
+
+Maestra: Introduccion a la Programacion
+- Definición de programación y su importancia
+	Maestra: La programación es el proceso de crear un conjunto de instrucciones que una computadora puede seguir para realizar una tarea específica. Estas instrucciones se escriben en un lenguaje de programación, que es un conjunto de reglas y comandos comprensibles por la máquina. En esencia, la programación implica decirle a la computadora qué hacer y cómo hacerlo.
+- Concepto de algoritmos
+	Maestra: Un algoritmo es un conjunto ordenado de pasos o instrucciones que se siguen para realizar una tarea específica o resolver un problema. Es como una receta que detalla qué hacer paso a paso para lograr un objetivo determinado. Los algoritmos son utilizados en muchas áreas de la vida, no solo en programación. Por ejemplo, las instrucciones para cepillarse los dientes por la mañana son un tipo simple de algoritmo
+	set Global.Check1 = true 
+=> END

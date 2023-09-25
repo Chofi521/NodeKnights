@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b8fnrf6pnsejy"]
+
+[ext_resource type="Script" path="res://Pizarra.gd" id="1_vo1d6"]
+[ext_resource type="PackedScene" uid="uid://cfgvxn3txuega" path="res://Interaction/interaction_area.tscn" id="2_p5mjl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_thgqh"]
+size = Vector2(260, 65.2499)
+
+[node name="Pizarra" type="Node2D"]
+position = Vector2(414.214, 173.033)
+script = ExtResource("1_vo1d6")
+
+[node name="InteractionArea" parent="." instance=ExtResource("2_p5mjl")]
+position = Vector2(-0.213562, -0.0328932)
+action_name = "Leer"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+position = Vector2(61, 34.375)
+shape = SubResource("RectangleShape2D_thgqh")

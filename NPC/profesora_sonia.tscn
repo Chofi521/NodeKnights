@@ -19,8 +19,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_s8lf3"]
-radius = 526.421
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wo1l"]
+size = Vector2(342.105, 426.316)
 
 [node name="ProfesoraSonia" type="Node2D"]
 position = Vector2(328, 249)
@@ -32,8 +32,8 @@ sprite_frames = SubResource("SpriteFrames_1h2vi")
 
 [node name="InteractionArea" parent="." instance=ExtResource("2_fa2nj")]
 position = Vector2(368.421, -363.158)
-action_name = "Coger"
+action_name = "Hablar"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
-position = Vector2(-252.632, 315.789)
-shape = SubResource("CircleShape2D_s8lf3")
+position = Vector2(-281.579, 376.316)
+shape = SubResource("RectangleShape2D_4wo1l")

@@ -1,5 +1,18 @@
-~ Start
 
-Sonia: Hola alumno
+~ Start
+if Global.Check1 == true:
+	Sonia: Ok, ya que leiste el tema de hoy, vamos a hacer una pequeña prueba
+	Sonia: Que es un algoritmo?
+	- Es una estructura de datos
+		Sonia: Incorrecto 
+		=> Start
+	- Es una caja donde se guarda informacion
+		Sonia: Incorrecto
+		=> Start
+	- Un algoritmo es un conjunto ordenado de pasos o instrucciones 
+		Sonia: Correcto
+else:
+	Sonia: Hola alumno
+	Sonia: Acercate a la pizara para ver el tema y realizar una evaluacion posteriormente
 
 => END

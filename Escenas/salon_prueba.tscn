@@ -1,20 +1,118 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmxfrrad3ol4s"]
+[gd_scene load_steps=15 format=3 uid="uid://bmxfrrad3ol4s"]
 
 [ext_resource type="Texture2D" uid="uid://c4vftfolv0hpf" path="res://Images/salon-sheet.png" id="1_6ir1o"]
 [ext_resource type="PackedScene" uid="uid://b2saht6u013ar" path="res://Player/player.tscn" id="2_p2p5q"]
 [ext_resource type="PackedScene" uid="uid://btr6hvaln1me0" path="res://NPC/profesora_sonia.tscn" id="3_8eyg8"]
+[ext_resource type="PackedScene" uid="uid://b8fnrf6pnsejy" path="res://pizarra.tscn" id="4_oadsf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15hu0"]
+size = Vector2(52, 181)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qkh08"]
+size = Vector2(45, 188)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_opcit"]
+a = Vector2(-23, 221)
+b = Vector2(-22, -230)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_oabfx"]
+a = Vector2(878, 0)
+b = Vector2(1, 1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xe6um"]
+b = Vector2(-2, -391)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_mnqjb"]
+b = Vector2(-65, -1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_diusj"]
+a = Vector2(0, -77)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wxwf4"]
+b = Vector2(-91, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rt25a"]
+b = Vector2(0, 63)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6wblk"]
+b = Vector2(-46, 1)
 
 [node name="SalonPrueba" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("2_p2p5q")]
 z_index = 1
-position = Vector2(440, 495)
+position = Vector2(900, 128)
 
 [node name="ProfesoraSonia" parent="." instance=ExtResource("3_8eyg8")]
 z_index = 1
-position = Vector2(434, 221)
+position = Vector2(400, 133)
 
 [node name="Salon-sheet" type="Sprite2D" parent="."]
 position = Vector2(574, 326)
 scale = Vector2(2.1, 1.28)
 texture = ExtResource("1_6ir1o")
+
+[node name="Pizarra" parent="." instance=ExtResource("4_oadsf")]
+position = Vector2(584, 86)
+
+[node name="Sillas2" type="StaticBody2D" parent="."]
+position = Vector2(575, 381)
+
+[node name="Sillas1" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(-336, 0)
+shape = SubResource("RectangleShape2D_15hu0")
+
+[node name="Sillas2" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(-201.5, 0)
+shape = SubResource("RectangleShape2D_qkh08")
+
+[node name="Sillas3" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(-69, -5)
+shape = SubResource("RectangleShape2D_15hu0")
+
+[node name="Sillas4" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(66, -4)
+shape = SubResource("RectangleShape2D_15hu0")
+
+[node name="Sillas5" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(201, -5.5)
+shape = SubResource("RectangleShape2D_15hu0")
+
+[node name="Sillas6" type="CollisionShape2D" parent="Sillas2"]
+position = Vector2(337, -6)
+shape = SubResource("RectangleShape2D_15hu0")
+
+[node name="Muros" type="StaticBody2D" parent="."]
+position = Vector2(575, 384)
+
+[node name="Muro1" type="CollisionShape2D" parent="Muros"]
+position = Vector2(-418, -27)
+shape = SubResource("SegmentShape2D_opcit")
+
+[node name="Muro2" type="CollisionShape2D" parent="Muros"]
+position = Vector2(-442, 190)
+shape = SubResource("SegmentShape2D_oabfx")
+
+[node name="Muro3" type="CollisionShape2D" parent="Muros"]
+position = Vector2(438, 190)
+shape = SubResource("SegmentShape2D_xe6um")
+
+[node name="Muro4" type="CollisionShape2D" parent="Muros"]
+position = Vector2(437, -218)
+shape = SubResource("SegmentShape2D_mnqjb")
+
+[node name="Muro5" type="CollisionShape2D" parent="Muros"]
+position = Vector2(373, -230)
+shape = SubResource("SegmentShape2D_diusj")
+
+[node name="Muro6" type="CollisionShape2D" parent="Muros"]
+position = Vector2(373, -307)
+shape = SubResource("SegmentShape2D_wxwf4")
+
+[node name="Muro7" type="CollisionShape2D" parent="Muros"]
+position = Vector2(281, -306)
+shape = SubResource("SegmentShape2D_rt25a")
+
+[node name="Muro8" type="CollisionShape2D" parent="Muros"]
+position = Vector2(281, -245)
+shape = SubResource("SegmentShape2D_6wblk")
