@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://1obghyuqnmqx"]
+
+[ext_resource type="Texture2D" uid="uid://c024cmdervbnx" path="res://Images/White.png" id="1_33owr"]
+[ext_resource type="Script" path="res://Scrips/BotonRegresar.gd" id="2_4atv3"]
+[ext_resource type="Script" path="res://Scrips/Button.gd" id="2_gwakl"]
+[ext_resource type="Texture2D" uid="uid://bv4ql1mmnin4o" path="res://Images/logo.png" id="4_xe2m3"]
+
+[node name="Opciones" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="White" type="Sprite2D" parent="."]
+position = Vector2(576.5, 321)
+scale = Vector2(0.902344, 0.905556)
+texture = ExtResource("1_33owr")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 223.0
+offset_right = 703.0
+offset_bottom = 331.0
+text = "Nuevo Juego
+"
+script = ExtResource("2_gwakl")
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 354.0
+offset_right = 703.0
+offset_bottom = 462.0
+text = "Continuar
+
+"
+
+[node name="Button3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 485.0
+offset_right = 703.0
+offset_bottom = 593.0
+text = "Regresar
+"
+script = ExtResource("2_4atv3")
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(551, 107)
+texture = ExtResource("4_xe2m3")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]
