@@ -1,0 +1,201 @@
+[gd_scene load_steps=10 format=3 uid="uid://cxwb220tpl001"]
+
+[ext_resource type="Texture2D" uid="uid://gkbsagkrverd" path="res://UI/Fondo.png" id="1_6tu3p"]
+[ext_resource type="FontFile" uid="uid://hv2deu2w8gqq" path="res://UI/MinecraftRegular-Bmg3.otf" id="2_tebsk"]
+[ext_resource type="Texture2D" uid="uid://bdn5nbxceeu02" path="res://UI/space.png" id="2_w3e3x"]
+
+[sub_resource type="Animation" id="Animation_jao3p"]
+resource_name = "TextDisplay"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body_Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_ybqud"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Body_Label:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5l03d"]
+_data = {
+"RESET": SubResource("Animation_ybqud"),
+"TextDisplay": SubResource("Animation_jao3p")
+}
+
+[sub_resource type="Animation" id="Animation_uawsg"]
+resource_name = "PressSpaceBar"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_sg6dl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_btddv"]
+_data = {
+"PressSpaceBar": SubResource("Animation_uawsg"),
+"RESET": SubResource("Animation_sg6dl")
+}
+
+[node name="Node" type="Node"]
+
+[node name="DialogBox" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Body_NinePatchRect" type="NinePatchRect" parent="DialogBox"]
+custom_minimum_size = Vector2(720, 256)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -128.0
+offset_right = 360.0
+offset_bottom = 128.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_6tu3p")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="DialogBox/Body_NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = -16
+theme_override_constants/margin_bottom = -48
+
+[node name="Body_Label" type="Label" parent="DialogBox/Body_NinePatchRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("2_tebsk")
+theme_override_font_sizes/font_size = 16
+text = "Bienvenido Jugador a esta nueva experiencia, te damos lla bienvenida a este mundo de
+aprendizaje y diversion, aprenderas mucho con nosotros"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Body_AnimationPlayer" type="AnimationPlayer" parent="DialogBox/Body_NinePatchRect/MarginContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_5l03d")
+}
+
+[node name="Speaker_NinePatchRect" type="NinePatchRect" parent="DialogBox"]
+custom_minimum_size = Vector2(180, 48)
+layout_mode = 0
+offset_left = 181.0
+offset_top = 172.0
+offset_right = 361.0
+offset_bottom = 220.0
+texture = ExtResource("2_w3e3x")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="Speaker_Label" type="Label" parent="DialogBox/Speaker_NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tebsk")
+theme_override_font_sizes/font_size = 22
+text = "Speaker
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpaceBar_NinePatchRect" type="NinePatchRect" parent="DialogBox"]
+custom_minimum_size = Vector2(256, 48)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -230.0
+offset_right = -135.0
+offset_bottom = -182.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_w3e3x")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="SpaceBar_Label" type="Label" parent="DialogBox/SpaceBar_NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_tebsk")
+theme_override_font_sizes/font_size = 22
+text = "Presione espacio"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="DialogBox/SpaceBar_NinePatchRect"]
+autoplay = "PressSpaceBar"
+libraries = {
+"": SubResource("AnimationLibrary_btddv")
+}

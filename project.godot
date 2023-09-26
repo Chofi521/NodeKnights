@@ -15,6 +15,7 @@ run/main_scene="res://Escenas/titulo.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://Images/icon.svg"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 [autoload]
 
@@ -43,3 +44,5 @@ interact={
 locale/translations_pot_files=PackedStringArray("res://Dialogos/SoniaTest.dialogue", "res://Dialogos/Temas.dialogue")
 =======
 >>>>>>> 2cee3a5ed9694de875b4941f3c4970ddb79cd952
+=======
+>>>>>>> 1e1d333eb76de67b30057b5df963d11bc98bdec1

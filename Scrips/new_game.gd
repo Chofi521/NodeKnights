@@ -15,6 +15,11 @@ func _process(delta):
 func _on_iniciar_pressed():
 	var name = $ObjetoAlmacenador2/TxtName.text
 	var FavThing = $ObjetoAlmacenador2/TxtFavThing.text
+<<<<<<< HEAD
+=======
+	
+	get_tree().change_scene_to_file("res://UI/Interfaz.tscn")
+>>>>>>> 1e1d333eb76de67b30057b5df963d11bc98bdec1
 
 
 func _on_regresar_pressed():
