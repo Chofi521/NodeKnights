@@ -27,28 +27,28 @@
          <header class="header_section">
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+                  <a class="navbar-brand" href="index.php"><img width="250" src="images/logo.png" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown active">
                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Páginas <span class="caret"></span></a>
                            <ul class="dropdown-menu">
-                              <li><a href="about.html">About</a></li>
-                              <li><a href="testimonial.html">Staff</a></li>
+                              <li><a href="about.php">About</a></li>
+                              <li><a href="estimonial.php">Staff</a></li>
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="product.html">Descargar</a>
+                           <a class="nav-link" href="product.php">Descargar</a>
                         </li>
                         
                         <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contáctanos</a>
+                           <a class="nav-link" href="contact.php">Contáctanos</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
@@ -191,7 +191,7 @@
                         <div class="img_container">
                            <div class="img-box">
                               <div class="img_box-inner">
-                                 <img src="images/client.jpg" alt="">
+                                 <img src="images/Notico.jpeg" alt="">
                               </div>
                            </div>
                         </div>
@@ -214,7 +214,7 @@
                         <div class="img_container">
                            <div class="img-box">
                               <div class="img_box-inner">
-                                 <img src="images/client.jpg" alt="">
+                                 <img src="images/Eymi.jpeg" alt="">
                               </div>
                            </div>
                         </div>
@@ -231,6 +231,29 @@
                         </div>
                         
                      </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="box col-lg-10 mx-auto">
+                     <div class="img_container">
+                        <div class="img-box">
+                           <div class="img_box-inner">
+                              <img src="images/Moman.jpeg" alt="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="detail-box">
+                        <h5>
+                           Norman Ruiz (Moman)
+                        </h5>
+                        <h6>
+                           Desarrollador
+                        </h6>
+                        <p>
+                           Con ganas de aprender y ayudar a quién lo necesito, 100% siervo del señor
+                        </p>
+                     </div>
+                     
+                  </div>
                </div>
                <div class="carousel_btn_box">
                   <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
@@ -279,7 +302,7 @@
                </div>
                <div class="col-md-4 footer-col">
                   <div class="footer_detail">
-                     <a href="index.html" class="footer-logo">
+                     <a href="index.php" class="footer-logo">
                      Famms
                      </a>
                      <p>

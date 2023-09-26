@@ -18,6 +18,7 @@
       <link href="css/font-awesome.min.css" rel="stylesheet" />
       <!-- Custom styles for this template -->
       <link href="css/style.css" rel="stylesheet" />
+      <link href="css/style2.css" rel="stylesheet" />
       <!-- responsive style -->
       <link href="css/responsive.css" rel="stylesheet" />
    </head>
@@ -25,31 +26,38 @@
       <div class="hero_area">
          <!-- header section strats -->
          <header class="header_section">
-
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+                  <a class="navbar-brand" href="index.php"><img width="250" src="images/logo.png" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Páginas <span class="caret"></span></a>
                            <ul class="dropdown-menu">
-                              <li><a href="about.html">Acerca de</a></li>
-                              <li><a href="testimonial.html">Testimonial</a></li>
+                              <li><a href="about.php">Acerca de</a></li>
+                              <li><a href="testimonial.php">Testimonial</a></li>
                            </ul>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="product.html">Descargar</a>
-                        </li>
                         <li class="nav-item active">
-                           <a class="nav-link" href="contact.html">Contáctanos</a>
+                           <a class="nav-link" href="product.php">Descargar</a>
                         </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="contact.php">Contáctanos</a>
+                        </li>
+                        <div class="right-links">
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Cambie el usuario</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link"  href="logout.php"> <button class="btn">Cerrar sesion</button></a>
+                           </li>
+                        </div>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -118,146 +126,39 @@
          </header>
          <!-- end header section -->
       </div>
-      <!-- inner page section -->
-      <section class="inner_page_head">
-         <div class="container_fuild">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="full">
-                     <h3>Contact us</h3>
-                  </div>
+      
+      <!-- center -->
+      <div class="container2 ">
+         <div class="box form-box">
+            <header>Cambiar usuario</header>
+            <form action="" method="post">
+               <div class="field input">
+                  <label for="username">Nombre de usuario</label>
+                  <input type="text" name="username" id="username" required>
                </div>
-            </div>
+
+               <div class="field input">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" required>
+               </div>
+
+               <div class="field input">
+                  <label for="age">Edad</label>
+                  <input type="text" name="age" id="age" required>
+               </div>
+
+
+               <div class="field">
+                  <input type="submit" class="btn" name="submit" value="Actualizar" required>
+               </div>
+
+               <div class="links">
+                  ¿No tienes cuenta? <a href="register.php">Crea tu cuenta ahora</a>
+               </div>
+            </form>
          </div>
-      </section>
-      <!-- end inner page section -->
-      <!-- why section -->
-      <section class="why_section layout_padding">
-         <div class="container">
-         
-            <div class="row">
-               <div class="col-lg-8 offset-lg-2">
-                  <div class="full">
-                     <form action="index.html">
-                        <fieldset>
-                           <input type="text" placeholder="Enter your full name" name="name" required />
-                           <input type="email" placeholder="Enter your email address" name="email" required />
-                           <input type="text" placeholder="Enter subject" name="subject" required />
-                           <textarea placeholder="Enter your message" required></textarea>
-                           <input type="submit" value="Submit" />
-                        </fieldset>
-                     </form>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- end why section -->
-      <!-- arrival section -->
-      <section class="arrival_section">
-         <div class="container">
-            <div class="box">
-               <div class="arrival_bg_box">
-                  <img src="images/arrival-bg.png" alt="">
-               </div>
-               <div class="row">
-                  <div class="col-md-6 ml-auto">
-                     <div class="heading_container remove_line_bt">
-                        <h2>
-                           #NewArrivals
-                        </h2>
-                     </div>
-                     <p style="margin-top: 20px;margin-bottom: 30px;">
-                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
-                     </p>
-                     <a href="">
-                     Shop Now
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- end arrival section -->
-      <!-- footer section -->
-      <footer class="footer_section">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4 footer-col">
-                  <div class="footer_contact">
-                     <h4>
-                        Reach at..
-                     </h4>
-                     <div class="contact_link_box">
-                        <a href="">
-                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                        <span>
-                        Location
-                        </span>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-phone" aria-hidden="true"></i>
-                        <span>
-                        Call +01 1234567890
-                        </span>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                        <span>
-                        demo@gmail.com
-                        </span>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 footer-col">
-                  <div class="footer_detail">
-                     <a href="index.html" class="footer-logo">
-                     Famms
-                     </a>
-                     <p>
-                        Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
-                     </p>
-                     <div class="footer_social">
-                        <a href="">
-                        <i class="fa fa-facebook" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="">
-                        <i class="fa fa-pinterest" aria-hidden="true"></i>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4 footer-col">
-                  <div class="map_container">
-                     <div class="map">
-                        <div id="googleMap"></div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="footer-info">
-               <div class="col-lg-7 mx-auto px-0">
-                  <p>
-                     &copy; <span id="displayYear"></span> All Rights Reserved By
-                     <a href="https://html.design/">Free Html Templates</a><br>
-         
-                     Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-                  </p>
-               </div>
-            </div>
-         </div>
-      </footer>
-      <!-- footer section -->
+      </div>
+
       <!-- jQery -->
       <script src="js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

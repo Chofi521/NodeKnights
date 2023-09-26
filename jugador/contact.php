@@ -25,29 +25,30 @@
       <div class="hero_area">
          <!-- header section strats -->
          <header class="header_section">
+
             <div class="container">
                <nav class="navbar navbar-expand-lg custom_nav-container ">
-                  <a class="navbar-brand" href="index.html"><img width="250" src="images/logo.png" alt="#" /></a>
+                  <a class="navbar-brand" href="index.php"><img width="250" src="images/logo.png" alt="#" /></a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class=""> </span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                           <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item dropdown active">
+                        <li class="nav-item dropdown">
                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Páginas <span class="caret"></span></a>
                            <ul class="dropdown-menu">
-                              <li><a href="about.html">Acerca de</a></li>
-                              <li><a href="testimonial.html">Staff</a></li>
+                              <li><a href="about.php">Acerca de</a></li>
+                              <li><a href="testimonial.php">Testimonial</a></li>
                            </ul>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="product.html">Descargar</a>
+                           <a class="nav-link" href="product.php">Descargar</a>
                         </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="contact.html">Contáctanos</a>
+                        <li class="nav-item active">
+                           <a class="nav-link" href="contact.php">Contáctanos</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="#">
@@ -123,7 +124,7 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="full">
-                     <h3>Acerca de nosotros</h3>
+                     <h3>Contactanos</h3>
                   </div>
                </div>
             </div>
@@ -133,53 +134,19 @@
       <!-- why section -->
       <section class="why_section layout_padding">
          <div class="container">
-            <div class="heading_container heading_center">
-               <h2>
-                  Quienes somos
-               </h2>
-            </div>
+         
             <div class="row">
-               <div class="col-md-4">
-                  <div class="box ">
-                     <div class="img-box">
-                        <img src="images/content1.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Trabajo en equipo
-                        </h5>
-                        <p>
-                           La importancia del trabajo en equipo en nuestro proyecto radica en nuestra habilidad para unir fuerzas y combinar nuestras competencias como estudiantes de Ingenieria de Computación. Esto nos permite abordar desafíos complejos y desarrollar un proyecto sólido y exitoso que promueva la educación en programación de manera efectiva y divertida.                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box ">
-                     <div class="img-box">
-                        <img src="images/content2.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Visión
-                        </h5>
-                        <p>
-                           Nuestra visión es transformar la experiencia de juego al introducir elementos educativos y creativos de programación. Queremos inspirar a los jugadores a descubrir la programación como una herramienta poderosa y emocionante dentro del mundo de los videojuegos. Visualizamos un futuro donde los jugadores puedan no solo disfrutar de una experiencia de juego envolvente, sino también adquirir habilidades valiosas de programación mientras juegan, lo que les permitirá ser innovadores y creadores en su propia trayectoria en la industria de los videojuegos y la tecnología.
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box ">
-                     <div class="img-box">
-                        <img src="images/content3.png" alt="">
-                     </div>
-                     <div class="detail-box">
-                        <h5>
-                           Objetivos
-                        </h5>
-                        <p>
-                           Nuestros objetivos se centran en fusionar de manera efectiva la diversión de los videojuegos con la educación en programación. Buscamos inspirar y capacitar a los jugadores para que adquieran habilidades sólidas de programación mientras disfrutan de experiencias de juego envolventes. Queremos fomentar la curiosidad y la creatividad, al tiempo que proporcionamos a los jugadores las herramientas para convertirse en innovadores digitales. Además, nuestro proyecto se esfuerza por promover la colaboración y el trabajo en equipo, preparando a los jugadores para un futuro en el que puedan aplicar sus habilidades de programación de manera efectiva en diversos campos y desafíos tecnológicos.
-                        </p>
-                     </div>
+               <div class="col-lg-8 offset-lg-2">
+                  <div class="full">
+                     <form action="index.php">
+                        <fieldset>
+                           <input type="text" placeholder="Enter your full name" name="name" required />
+                           <input type="email" placeholder="Enter your email address" name="email" required />
+                           <input type="text" placeholder="Enter subject" name="subject" required />
+                           <textarea placeholder="Enter your message" required></textarea>
+                           <input type="submit" value="Submit" />
+                        </fieldset>
+                     </form>
                   </div>
                </div>
             </div>
@@ -191,19 +158,21 @@
          <div class="container">
             <div class="box">
                <div class="arrival_bg_box">
-                  <img src="images/arrival-bg.jpg" alt="">
+                  <img src="images/arrival-bg.png" alt="">
                </div>
                <div class="row">
                   <div class="col-md-6 ml-auto">
                      <div class="heading_container remove_line_bt">
                         <h2>
-                           ¡Únete a la aventura de aprender!
+                           #NewArrivals
                         </h2>
                      </div>
                      <p style="margin-top: 20px;margin-bottom: 30px;">
-                        ¡Explora, Aprende y Juega! Únete a nuestra comunidad y descubre cómo hacemos que la programación sea emocionante a través de un juego estilo pixel art. ¿Listo para la aventura?
+                        Vitae fugiat laboriosam officia perferendis provident aliquid voluptatibus dolorem, fugit ullam sit earum id eaque nisi hic? Tenetur commodi, nisi rem vel, ea eaque ab ipsa, autem similique ex unde!
                      </p>
-                     
+                     <a href="">
+                     Shop Now
+                     </a>
                   </div>
                </div>
             </div>
@@ -243,7 +212,7 @@
                </div>
                <div class="col-md-4 footer-col">
                   <div class="footer_detail">
-                     <a href="index.html" class="footer-logo">
+                     <a href="index.php" class="footer-logo">
                      Famms
                      </a>
                      <p>

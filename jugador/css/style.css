@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 * {
   box-sizing: border-box;
 }
@@ -1080,18 +1081,23 @@ form textarea {
 }
 
 form input[type="submit"] {
-    border: none;
-    padding: 15px 45px;
     width: auto;
-    font-size: 16px;
-    text-transform: capitalize;
     line-height: normal;
     margin: 0 auto;
     display: flex;
-    background: #333;
-    color: #fff;
+    background: purple;
     font-weight: 600;
-    transition: ease all 0.1s;
+
+    height: 35px;
+    background: purple;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s;
+    margin-top: 10px;
+    padding: 0px 10px;
 }
 
 form input[type="submit"]:hover,
