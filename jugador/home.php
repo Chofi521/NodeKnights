@@ -1,7 +1,11 @@
 <?php
-   ob_start();
-?>
+   session_start();
 
+   include("php/config.php");
+   if(!isset($_SESSION['valid'])){
+      header("Location: product.php");
+   }
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -26,7 +30,7 @@
       <!-- responsive style -->
       <link href="css/responsive.css" rel="stylesheet" />
    </head>
-   <body class="sub_page">
+   <body>
       <div class="hero_area">
          <!-- header section strats -->
          <header class="header_section">
@@ -38,22 +42,49 @@
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
                      <ul class="navbar-nav">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                            <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Páginas <span class="caret"></span></a>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Paginas <span class="caret"></span></a>
                            <ul class="dropdown-menu">
                               <li><a href="about.php">Acerca de</a></li>
-                              <li><a href="testimonial.php">Testimonial</a></li>
+                              <li><a href="testimonial.php">Staff</a></li>
                            </ul>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                            <a class="nav-link" href="product.php">Descargar</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="contact.php">Contáctanos</a>
                         </li>
+
+                        <div class="right-links">
+
+                           <?php 
+            
+                              $id = $_SESSION['id'];
+                              $query = mysqli_query($con,"SELECT*FROM usuario WHERE Id=$id");
+
+                              while($result = mysqli_fetch_assoc($query)){
+                                 $res_Uname = $result['Username'];
+                                 $res_Name = $result['Name'];
+                                 $res_Email = $result['Email'];
+                                 $res_Age = $result['Age'];
+                                 $res_id = $result['Id'];
+                              }
+            
+                              echo "<a href='edit.php?Id=$res_id'>Cambie el usuario</a>";
+                           ?>
+
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Cambie el usuario</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link"  href="logout.php"> <button class="btn">Cerrar sesion</button></a>
+                           </li>
+                        </div>
+                        
                         <li class="nav-item">
                            <a class="nav-link" href="#">
                               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029" style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
@@ -110,72 +141,45 @@
                               </svg>
                            </a>
                         </li>
-                       
+   
                      </ul>
                   </div>
                </nav>
             </div>
          </header>
          <!-- end header section -->
+         
+
+         <main>
+            <div class="main-box top">
+               <div class="top">
+                  <div class="box">
+                     <p>Bienvenido <b><?php echo $res_Name ?></b></p>
+               </div>
+               <div class="box">
+                  <p>Correo: <b><?php echo $res_Email ?></b>.</p>
+               </div>
+            </div>
+          <div class="bottom">
+            <div class="box">
+                <p>Username: <b><?php echo $res_Uname ?> years old</b>.</p> 
+            </div>
+          </div>
+            </div>
+         </main>
       </div>
+
+      <!-- Welcome start -->
       
-      <!-- center -->
-      <div class="container2">
-         <div class="box form-box">
-            <?php
+      <!-- end Welcome section -->
 
-               include("php/config.php");
-               if (isset($_POST['submit'])){
-                  $email = mysqli_real_escape_string($con, $_POST['email']);
-                  $password = mysqli_real_escape_string($con, $_POST['password']);
-
-                  $result = mysqli_query($con, "SELECT * FROM usuario WHERE Email='$email' AND Password='$password' ") or die("Error de consulta");
-                  $row = mysqli_fetch_assoc($result);
-
-                  if(is_array($row) && !empty($row)){
-                     $_SESSION['valid'] = $row['Email'];
-                     $_SESSION['username'] = $row['Username'];
-                     $_SESSION['name'] = $row['Name'];
-                     $_SESSION['age'] = $row['Age'];
-                     $_SESSION['id'] = $row['Id'];
-
-                  }else{
-                     echo "<div class='message'>
-                              <p>Nombre de usuario o contraseña incorrecta</p>
-                           </div>  <br>";
-                     echo "<a href='product.php'><button button class='btn'>Regresar</button>";
-                  }
-                  if (isset($_SESSION['valid'])){
-                     header("Location: home.php");
-                  }
-               }else{
-
-               
-            ?>
-            <header>Iniciar sesion</header>
-            <form action="" method="post">
-               <div class="field input">
-                  <label for="email">Correo electrónico</label>
-                  <input type="email" name="email" id="email" required>
-               </div>
-
-               <div class="field input">
-                  <label for="password">Contraseña</label>
-                  <input type="password" name="password" id="password" required>
-               </div>
-
-               <div class="field">
-                  <input type="submit" class="btn" name="submit" value="Login" required>
-               </div>
-
-               <div class="links">
-                  ¿No tienes cuenta? <a href="register.php">Crea tu cuenta ahora</a>
-               </div>
-            </form>
-         </div>
-         <?php } ?>
+      <div class="cpy_">
+         <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
+         
+            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+         
+         </p>
       </div>
-
       <!-- jQery -->
       <script src="js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->

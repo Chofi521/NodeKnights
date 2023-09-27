@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
    <head>
@@ -50,14 +52,7 @@
                            <a class="nav-link" href="contact.php">Contáctanos</a>
                         </li>
 
-                        <div class="right-links">
-                           <li class="nav-item">
-                              <a class="nav-link" href="#">Cambie el usuario</a>
-                           </li>
-                           <li class="nav-item">
-                              <a class="nav-link"  href="logout.php"> <button class="btn">Cerrar sesion</button></a>
-                           </li>
-                        </div>
+   
                         
                         <li class="nav-item">
                            <a class="nav-link" href="#">

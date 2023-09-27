@@ -39,6 +39,7 @@
     display: flex;
     margin-bottom: 10px;
     flex-direction: column;
+    text-transform: none;
 
 }
 .form-box form .input input{
@@ -49,6 +50,7 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     outline: none;
+    text-transform: none;
 }
 .btn{
     height: 35px;
@@ -108,4 +110,13 @@ main{
     .bottom{
         margin-top: 0;
     }
+}
+.message{
+    text-align: center;
+    background: #f9eded;
+    padding: 15px 0px;
+    border: 1px solid #699053;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    color: red;
 }

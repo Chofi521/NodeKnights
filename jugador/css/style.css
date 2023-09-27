@@ -641,6 +641,7 @@ a:focus {
     background-color: #ffffff;
     margin-top: 15px;
     text-align: left;
+    text-transform: none;
 }
 
 .subscribe_section .subscribe_form form input::-webkit-input-placeholder {
@@ -1064,7 +1065,7 @@ form input {
     width: 100%;
     font-size: 14px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    text-transform: none !important;
     line-height: normal;
 }
 
@@ -1076,7 +1077,7 @@ form textarea {
     min-height: 150px;
     font-size: 14px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    text-transform: none;
     line-height: normal;
 }
 
